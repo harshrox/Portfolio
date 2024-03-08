@@ -6,9 +6,13 @@ import github from './assets/github.svg'
 import leetcode from './assets/leetcode.svg'
 
 function App() {
+  
   window.onload = function(){
     window.scrollTo(0 , 0);
   };
+
+  const [activeLink, setActiveLink] = useState(0);  // Hook used to update the highlighting of navbar links based on which section is being viewed
+
 
   return (
     <>
@@ -23,16 +27,19 @@ function App() {
             <div>
               <ul className="flex gap-5 md:gap-10">
                 <li>
-                  <a href="#About" className="text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700">ABOUT</a>
+                  <a href="#" className={`text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700 ${activeLink === 0 ? 'text-white border-b-2' : ''}`} onClick={()=> setActiveLink(0)}>HOME</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700">SKILLS</a>
+                  <a href="#About" className={`text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700 ${activeLink === 1 ? 'text-white border-b-2' : ''}`} onClick={()=> setActiveLink(1)}>ABOUT</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700">PROJECTS</a>
+                  <a href="#" className={`text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700 ${activeLink === 2 ? 'text-white border-b-2' : ''}`} onClick={()=> setActiveLink(2)}>SKILLS</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700">CONNECT</a>
+                  <a href="#" className={`text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700 ${activeLink === 3 ? 'text-white border-b-2' : ''}`} onClick={()=> setActiveLink(3)}>PROJECTS</a>
+                </li>
+                <li>
+                  <a href="#" className={`text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700 ${activeLink === 4 ? 'text-white border-b-2' : ''}`} onClick={()=> setActiveLink(4)}>CONNECT</a>
                 </li>
               </ul>
             </div>
