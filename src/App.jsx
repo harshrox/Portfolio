@@ -100,9 +100,9 @@ function App() {
 
             {/* Menu Icon / Close Icon */}
             <div className="w-6 h-8 absolute right-5 top-[17px] block md:hidden" onClick={() => { setMenuIcon(menuIcon => !menuIcon); setCloseIcon(closeIcon => !closeIcon) }}>
-              <span className={`w-full h-1 bg-blue-700 block absolute top-1/2 left-1/2 transition-transform duration-500 ${menuIcon ? 'transform -translate-x-1/2 -translate-y-2.5' : 'transform -rotate-45 -translate-x-1/2 -translate-y-1/2'}`}></span>
-              <span className={`w-full h-1 bg-blue-700 block absolute top-1/2 left-1/2 transition duration-500 ${menuIcon ? 'transform -translate-x-1/2 -translate-y-1/2' : 'transform -rotate-180 -translate-x-1/2 -translate-y-1/2 opacity-0'}`}></span>
-              <span className={`w-full h-1 bg-blue-700 block absolute top-1/2 left-1/2 transition-transform duration-500 ${menuIcon ? 'transform -translate-x-1/2 translate-y-1.5' : 'transform rotate-45 -translate-x-1/2 -translate-y-1/2'}`}></span>
+              <span className={`w-full h-1 bg-blue-700 block absolute top-1/2 left-1/2 transition-transform duration-500 ${menuIcon ? 'transform -translate-x-1/2 -translate-y-2' : 'transform -rotate-45 -translate-x-1/2 -translate-y-1/2'}`}></span>
+              {/* <span className={`w-full h-1 bg-blue-700 block absolute top-1/2 left-1/2 transition duration-500 ${menuIcon ? 'transform -translate-x-1/2 -translate-y-1/2' : 'transform -rotate-180 -translate-x-1/2 -translate-y-1/2 opacity-0'}`}></span> */}
+              <span className={`w-full h-1 bg-blue-700 block absolute top-1/2 left-1/2 transition-transform duration-500 ${menuIcon ? 'transform -translate-x-1/2 translate-y-1' : 'transform rotate-45 -translate-x-1/2 -translate-y-1/2'}`}></span>
             </div>
 
 
@@ -196,27 +196,32 @@ function App() {
 
       {/* Skills */}
       <div className="h-auto w-full flex flex-col justify-center items-center bg-black" id="Skills">
-        <section className='my-20 md:my-40 w-[90%] md:w-[70%] flex flex-col'>
+        <section className='my-20 md:my-32 w-[90%] md:w-[70%] flex flex-col'>
           {/* About me */}
           <div className="px-5 md:px-10 py-2 text-2xl md:text-4xl font-mono text-white">
             SKILLS
           </div>
           <div className="mx-5 md:mx-10 mb-5 md:mb-10 w-[6%] border border-blue-700"></div>
-          <div className="mt-10 flex flex-row flex-wrap align-middle justify-evenly mb-32">
-            <img src={html} alt="HTML" title="HTML"/>
-            <img src={css} alt="CSS" title="CSS" />
-            <img src={javascript} alt="JavaScript" title="JavaScript" />
+          <div className="mt-10 flex flex-row flex-wrap justify-evenly mb-32">
+            <img src={html} alt="HTML" title="HTML" className="w-20 md:w-auto"/>
+            <img src={css} alt="CSS" title="CSS" className="w-20 md:w-auto"/>
+            <img src={javascript} alt="JavaScript" title="JavaScript" className="w-20 md:w-auto"/>
           </div>
-          <div className="flex flex-row flex-wrap align-middle justify-evenly mb-32">
-            <img src={tailwind} alt="Tailwind CSS" title="Tailwind CSS" />
-            <img src={react} alt="React" title="React" />
+          <div className="flex flex-row flex-wrap justify-evenly mb-32">
+            <img src={tailwind} alt="Tailwind CSS" title="Tailwind CSS" className="w-20 md:w-auto"/>
+            <img src={react} alt="React" title="React" className="w-20 md:w-auto"/>
           </div>
-          <div className="flex flex-row flex-wrap align-middle justify-evenly mb-32">
-            <img src={java} alt="Java" title="Java" />
-            <img src={spring} alt="Spring Boot" title="Spring Boot" />
-            <img src={python} alt="Python3" title="Python3" />
+          <div className="flex flex-row flex-wrap justify-evenly mb-32">
+            <img src={java} alt="Java" title="Java" className="w-20 md:w-auto"/>
+            <img src={spring} alt="Spring Boot" title="Spring Boot" className="w-20 md:w-auto"/>
+            <img src={python} alt="Python3" title="Python3" className="w-20 md:w-auto"/>
           </div>
         </section>
+      </div>
+
+      {/* Project */}
+      <div className="h-screen">
+
       </div>
 
     </>

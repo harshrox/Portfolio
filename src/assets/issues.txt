@@ -1,3 +1,5 @@
 h-screen for intro and about page (for iphone SE)   
 
 menu icon vertical alignment
+
+left alignment for navbar and content
