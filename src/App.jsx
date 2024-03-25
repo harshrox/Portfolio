@@ -14,6 +14,7 @@ import tailwind from './assets/tailwind.svg'
 import python from './assets/python.svg'
 import android from './assets/android.svg'
 import react from './assets/react.svg'
+import cpp from './assets/c++.svg'
 
 function App() {
 
@@ -31,8 +32,9 @@ function App() {
   return (
     <>
 
-      {/* Header / navbar */}
-      <div className="flex flex-col h-screen" id="Intro">
+      {/* Navbar and Intro */}
+      <div className="flex flex-col min-h-screen" id="Intro">
+        {/* Navbar */}
         <header className="bg-black fixed w-full z-20">
           <div className={`px-6 md:px-4 py-3 md:py-5 flex justify-center md:items-center md:justify-evenly shadow-lg shadow-slate-800`}>
             <div className={`${menuIcon ? 'absolute md:relative left-5 md:left-0 top-[20px] md:top-0 block' : 'hidden md:block'}`}>
@@ -164,7 +166,7 @@ function App() {
                 <h2 className="text-xl font-bold font-mono">Indian Institute of Information Technology, Kalyani</h2>
                 <small className="font-mono">2022 - 2026</small><br />
                 <small className="font-mono">Grade: 9.42 CGPA</small>
-                <p className="font-mono pt-2">I am currently enrolled in the Bachelor of Technology program in Computer Science and Engineering, currently in my fourth semester. My current CGPA stands at <span className="font-bold">9.42</span>, indicating consistent academic performance.</p>
+                <p className="font-mono pt-2">I am currently enrolled in the Bachelor of Technology program in Computer Science and Engineering, currently in my fourth semester. My current CGPA stands at <span className="font-bold">9.42</span> out of <span className="font-bold">10</span>, indicating consistent academic performance.</p>
               </div>
             </div>
 
@@ -195,32 +197,38 @@ function App() {
       </div>
 
       {/* Skills */}
-      <div className="h-auto w-full flex flex-col justify-center items-center bg-black" id="Skills">
-        <section className='my-20 md:my-32 w-[90%] md:w-[70%] flex flex-col'>
+      <div className="min-h-screen w-full flex flex-col items-center bg-black" id="Skills">
+        <section className='my-20 md:my-40 w-[90%] md:w-[70%] flex flex-col flex-grow'>
           {/* About me */}
           <div className="px-5 md:px-10 py-2 text-2xl md:text-4xl font-mono text-white">
             SKILLS
           </div>
           <div className="mx-5 md:mx-10 mb-5 md:mb-10 w-[6%] border border-blue-700"></div>
-          <div className="mt-10 flex flex-row flex-wrap justify-evenly mb-32">
-            <img src={html} alt="HTML" title="HTML" className="w-20 md:w-auto"/>
-            <img src={css} alt="CSS" title="CSS" className="w-20 md:w-auto"/>
-            <img src={javascript} alt="JavaScript" title="JavaScript" className="w-20 md:w-auto"/>
-          </div>
-          <div className="flex flex-row flex-wrap justify-evenly mb-32">
-            <img src={tailwind} alt="Tailwind CSS" title="Tailwind CSS" className="w-20 md:w-auto"/>
-            <img src={react} alt="React" title="React" className="w-20 md:w-auto"/>
-          </div>
-          <div className="flex flex-row flex-wrap justify-evenly mb-32">
-            <img src={java} alt="Java" title="Java" className="w-20 md:w-auto"/>
-            <img src={spring} alt="Spring Boot" title="Spring Boot" className="w-20 md:w-auto"/>
-            <img src={python} alt="Python3" title="Python3" className="w-20 md:w-auto"/>
+          <div className="flex flex-col flex-grow justify-center">
+            <div className="mt-5 flex flex-row flex-wrap justify-evenly mb-16">
+              <img src={html} alt="HTML" title="HTML" className="w-20 md:w-auto"/>
+              <img src={css} alt="CSS" title="CSS" className="w-20 md:w-auto"/>
+              <img src={javascript} alt="JavaScript" title="JavaScript" className="w-20 md:w-auto"/>
+            </div>
+            <div className="flex flex-row flex-wrap justify-evenly mb-16">
+              <img src={tailwind} alt="Tailwind CSS" title="Tailwind CSS" className="w-20 md:w-auto"/>
+              <img src={react} alt="React" title="React" className="w-20 md:w-auto"/>
+            </div>
+            <div className="flex flex-row flex-wrap justify-evenly mb-16">
+              <img src={java} alt="Java" title="Java" className="w-20 md:w-auto"/>
+              <img src={spring} alt="Spring Boot" title="Spring Boot" className="w-20 md:w-auto"/>
+              <img src={android} alt="Android Studio" title="Android Studio" className="w-20 md:w-auto"/>
+            </div>
+            <div className="flex flex-row flex-wrap justify-evenly">
+              <img src={python} alt="Python3" title="Python3" className="w-20 md:w-auto"/>
+              <img src={cpp} alt="C++" title="C++" className="w-20 md:w-auto"/>
+            </div>
           </div>
         </section>
       </div>
 
       {/* Project */}
-      <div className="h-screen">
+      <div className="h-screen bg-white">
 
       </div>
 
