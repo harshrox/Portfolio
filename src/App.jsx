@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { TypeAnimation } from 'react-type-animation';
 import profile from './assets/Photo.png'
 import linkedin from './assets/linkedin.svg'
 import github from './assets/github.svg'
@@ -41,7 +42,7 @@ function App() {
               <h1 className="font-bold text-xl">Portfolio</h1>
             </div>
             <div className={`overflow-hidden ${menuIcon ? 'transition-max-h duration-500 max-h-0' : 'transition-max-h duration-1000 max-h-[1000px]'} md:max-h-[none] md:block text-xl md:text-base mt-8 mb-2 md:mt-0 md:mb-0`}>
-            {/* <div className={`${menuIcon ? 'md:block hidden' : 'block text-xl md:text-base mt-8 mb-2 md:mt-0 md:mb-0'}`}> */}
+              {/* <div className={`${menuIcon ? 'md:block hidden' : 'block text-xl md:text-base mt-8 mb-2 md:mt-0 md:mb-0'}`}> */}
               <ul className="flex md:flex-row flex-col md:mx-0 gap-5 md:gap-10 items-center">
                 <li>
                   <a href="#" className={`text-gray-400 hover:text-white cursor-pointer font-mono font-semibold hover:border-b-2 border-b-blue-700 ${activeLink === 0 ? 'text-white border-b-2' : ''}`} onClick={() => { setActiveLink(0); setMenuIcon(true); setCloseIcon(false) }}>HOME</a>
@@ -120,7 +121,23 @@ function App() {
                 <h2 className="text-2xl md:text-4xl font-serif">Hello, I am</h2>
                 <h2 className="font-bold text-4xl md:text-7xl mt-2 font-mono">Harsh Anand</h2>
                 <div className="w-1/4 h-1 bg-blue-500 mt-1 md:mt-2"></div>
-                <h2 className="text-2xl md:text-4xl mt-2 md:mt-4 text-blue-700 font-serif">Full stack developer.</h2>
+                <h2 className="text-2xl md:text-4xl mt-2 md:mt-4 text-blue-700 font-serif">
+                  <TypeAnimation
+                    sequence={[
+                      // Same substring at the start will only be typed out once, initially
+                      'Full stack Developer.',
+                      1000, // wait 1s 
+                      'Competitive Programmer.',
+                      1000,
+                      'Gamer.',
+                      1000
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    style={{display: 'inline-block' }}
+                    repeat={Infinity}
+                  />
+                </h2>
               </div>
               <div className="flex justify-center items-center mt-10 md:mt-0">
                 <img src={profile} alt="Profile" className="w-52 border-b-2 border-blue-700 pb-5" />
@@ -171,24 +188,24 @@ function App() {
             </div>
 
             <div className="pl-5 py-5 md:pl-10 md:py-4 relative w-full md:w-1/2 left-0 md:left-1/2">
-              <img src={avatar} alt="" className="absolute w-10 left-[-30px] md:left-[-22px] top-8 z-10"/>
+              <img src={avatar} alt="" className="absolute w-10 left-[-30px] md:left-[-22px] top-8 z-10" />
               <div className="px-5 py-8 bg-slate-900 relative rounded-lg">
                 <h2 className="text-xl font-bold font-mono">Kendriya Vidyalaya Saharsa</h2>
                 <small className="font-mono">2019 - 2021</small><br />
                 <small className="font-mono">Grade: 89.4%</small>
                 <p className="font-mono pt-2">I completed my 12th grade education from the Central Board of Secondary Education
-                 (CBSE) with an overall score of <span className="font-bold">89.4%</span> in the Maths stream and <span className="font-bold">91%</span> score in Computer Science.</p>
+                  (CBSE) with an overall score of <span className="font-bold">89.4%</span> in the Maths stream and <span className="font-bold">91%</span> score in Computer Science.</p>
               </div>
             </div>
 
             <div className="pl-5 py-5 md:pl-0 md:pr-10 md:py-4 relative w-full md:w-1/2 left-0">
-              <img src={avatar} alt="" className="absolute w-10 left-[-30px] md:left-auto md:right-[-18px] top-8 z-10"/>
+              <img src={avatar} alt="" className="absolute w-10 left-[-30px] md:left-auto md:right-[-18px] top-8 z-10" />
               <div className="px-5 py-8 bg-slate-900 relative rounded-lg">
                 <h2 className="text-xl font-bold font-mono">Jay Pratap Singh Public School, Saharsa</h2>
                 <small className="font-mono">2012 - 2019</small><br />
                 <small className="font-mono">Grade: 92.6%</small>
                 <p className="font-mono pt-2">I completed my 10th grade education from the Central Board of Secondary Education
-                 (CBSE) with an overall score of <span className="font-bold">92.6%</span> in the Science stream and <span className="font-bold">100%</span> score in Computer Science.</p>
+                  (CBSE) with an overall score of <span className="font-bold">92.6%</span> in the Science stream and <span className="font-bold">100%</span> score in Computer Science.</p>
               </div>
             </div>
           </div>
@@ -206,22 +223,22 @@ function App() {
           <div className="mx-5 md:mx-10 mb-5 md:mb-10 w-[6%] border border-blue-700"></div>
           <div className="flex flex-col flex-grow justify-center">
             <div className="mt-5 flex flex-row flex-wrap justify-evenly mb-16">
-              <img src={html} alt="HTML" title="HTML" className="w-20 md:w-auto"/>
-              <img src={css} alt="CSS" title="CSS" className="w-20 md:w-auto"/>
-              <img src={javascript} alt="JavaScript" title="JavaScript" className="w-20 md:w-auto"/>
+              <img src={html} alt="HTML" title="HTML" className="w-20 md:w-auto" />
+              <img src={css} alt="CSS" title="CSS" className="w-20 md:w-auto" />
+              <img src={javascript} alt="JavaScript" title="JavaScript" className="w-20 md:w-auto" />
             </div>
             <div className="flex flex-row flex-wrap justify-evenly mb-16">
-              <img src={tailwind} alt="Tailwind CSS" title="Tailwind CSS" className="w-20 md:w-auto"/>
-              <img src={react} alt="React" title="React" className="w-20 md:w-auto"/>
+              <img src={tailwind} alt="Tailwind CSS" title="Tailwind CSS" className="w-20 md:w-auto" />
+              <img src={react} alt="React" title="React" className="w-20 md:w-auto" />
             </div>
             <div className="flex flex-row flex-wrap justify-evenly mb-16">
-              <img src={java} alt="Java" title="Java" className="w-20 md:w-auto"/>
-              <img src={spring} alt="Spring Boot" title="Spring Boot" className="w-20 md:w-auto"/>
-              <img src={android} alt="Android Studio" title="Android Studio" className="w-20 md:w-auto"/>
+              <img src={java} alt="Java" title="Java" className="w-20 md:w-auto" />
+              <img src={spring} alt="Spring Boot" title="Spring Boot" className="w-20 md:w-auto" />
+              <img src={android} alt="Android Studio" title="Android Studio" className="w-20 md:w-auto" />
             </div>
             <div className="flex flex-row flex-wrap justify-evenly">
-              <img src={python} alt="Python3" title="Python3" className="w-20 md:w-auto"/>
-              <img src={cpp} alt="C++" title="C++" className="w-20 md:w-auto"/>
+              <img src={python} alt="Python3" title="Python3" className="w-20 md:w-auto" />
+              <img src={cpp} alt="C++" title="C++" className="w-20 md:w-auto" />
             </div>
           </div>
         </section>
