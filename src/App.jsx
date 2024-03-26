@@ -114,13 +114,13 @@ function App() {
         </header>
 
         {/* Intro */}
-        <main className="flex-grow flex flex-col justify-center items-center">
+        <main className="mt-10 md:mt-0 flex-grow flex flex-col justify-center items-center">
           <section>
             <div className="grid grid-cols-1 md:grid-cols-2 md:p-16 border-0 md:border-x-2 border-slate-800 w-screen md:w-auto">
               <div className="md:p-2 flex justify-center items-center flex-col md:block">
                 <h2 className="text-2xl md:text-4xl font-serif">Hello, I am</h2>
                 <h2 className="font-bold text-4xl md:text-7xl mt-2 font-mono">Harsh Anand</h2>
-                <div className="w-1/4 h-1 bg-blue-500 mt-1 md:mt-2"></div>
+                <div className="w-1/4 h-1 bg-blue-700 mt-1 md:mt-2"></div>
                 <h2 className="h-20 text-2xl md:text-4xl mt-2 md:mt-4 text-blue-700 font-serif">
                   <TypeAnimation
                     sequence={[
@@ -145,7 +145,7 @@ function App() {
             </div>
           </section>
           <section>
-            <button className="mt-10 md:mt-20 py-5 px-7 md:px-16 border-x hover:bg-gray-900 text-xl font-mono">DOWNLOAD RESUME</button>
+            <button className="mt-20 py-5 px-7 md:px-16 border-x hover:bg-gray-900 text-xl font-mono">DOWNLOAD RESUME</button>
           </section>
         </main>
       </div>
