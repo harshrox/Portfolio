@@ -1,28 +1,43 @@
 import { useState } from 'react'
 import './App.css'
 import { TypeAnimation } from 'react-type-animation';
-import profile from './assets/Photo.png'
-import linkedin from './assets/linkedin.svg'
-import github from './assets/github.svg'
-import leetcode from './assets/leetcode.svg'
-import avatar from './assets/avatar.svg'
-import java from './assets/java.svg'
-import html from './assets/html.svg'
-import css from './assets/css.svg'
-import javascript from './assets/javascript.svg'
-import spring from './assets/spring.svg'
-import tailwind from './assets/tailwind.svg'
-import python from './assets/python.svg'
-import android from './assets/android.svg'
-import react from './assets/react.svg'
-import cpp from './assets/c++.svg'
-import blog1 from './assets/blog1.png'
-import blog2 from './assets/blog2.png'
-import mail from './assets/mail.svg'
-import hackerrank from './assets/hackerrank.svg'
-import arrow from './assets/arrow.svg'
+import profile from './assets/Images/Photo.png'
+import linkedin from './assets/Images/linkedin.svg'
+import github from './assets/Images/github.svg'
+import leetcode from './assets/Images/leetcode.svg'
+import avatar from './assets/Images/avatar.svg'
+import java from './assets/Images/java.svg'
+import html from './assets/Images/html.svg'
+import css from './assets/Images/css.svg'
+import javascript from './assets/Images/javascript.svg'
+import spring from './assets/Images/spring.svg'
+import tailwind from './assets/Images/tailwind.svg'
+import python from './assets/Images/python.svg'
+import android from './assets/Images/android.svg'
+import react from './assets/Images/react.svg'
+import cpp from './assets/Images/c++.svg'
+import mail from './assets/Images/mail.svg'
+import hackerrank from './assets/Images/hackerrank.svg'
+import arrow from './assets/Images/arrow.svg'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Blogs from './assets/Blogs/Blogs';
+import Blog1 from './assets/Blogs/Blog1'; 
+import Blog2 from './assets/Blogs/Blog2'; 
+import Blog3 from './assets/Blogs/Blog3'; 
 
 function App() {
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/blog1" element={<Blog1 />} />
+				<Route path="/blog2" element={<Blog2 />} />
+				<Route path="/blog3" element={<Blog3 />} />
+			</Routes>
+		</Router>
+	);
+}
+function Home() {
 
 	window.onload = function () {
 		window.scrollTo(0, 0);
@@ -137,6 +152,8 @@ function App() {
 											1000, // wait 1s 
 											'Competitive Programmer.',
 											1000,
+											'ML Enthusiast.',
+											1000,
 											'Gamer.',
 											1000
 										]}
@@ -176,8 +193,8 @@ function App() {
 					</div>
 				</section>
 
-				<div className='h-0 w-0 md:h-20 md:w-full flex justify-center items-center' id="Education">
-					<a href="#Education"><img src={arrow} alt="Arrow" className="w-10 h-10"/></a>
+				<div className='h-0 w-0 xl:h-20 xl:w-full flex justify-center items-center' id="Education">
+					<a href="#Education"><img src={arrow} alt="Arrow" className="w-10 h-10" /></a>
 				</div>
 
 				{/* Education */}
@@ -286,40 +303,7 @@ function App() {
 			</div>
 
 			{/* Blogs */}
-			<div className="w-full flex flex-col items-center bg-black" id="Blogs">
-				<section className='mt-20 md:mt-40 px-5 md:px-10 w-[90%] md:w-[70%] flex flex-col flex-grow'>
-					<div className="py-2 text-2xl md:text-4xl font-mono text-white">
-						BLOGS
-					</div>
-					<div className="mb-5 md:mb-10 w-[6%] border border-blue-700"></div>
-					<div className="flex flex-col flex-grow items-center">
-						<div className="flex flex-col md:flex-row justify-between gap-10">
-							<div className="p-4 flex flex-col items-center rounded-lg shadow-2xl shadow-slate-700 hover:shadow-blue-900 text-lg font-mono w-full md:w-1/2">
-								<img src={blog1} alt="" className="rounded-lg w-full" />
-								<div>
-									<h3 className="mt-2">Oh My Posh!</h3>
-									<div className="border border-slate-800"></div>
-								</div>
-								<small className="mt-5 w-[90%]">Ditch the boring terminal, install Oh My Posh for a fun and functional makeover!</small>
-								<div className="mt-5 w-full flex flex-row justify-center">
-									<button className="mt-5 py-2 px-7 md:px-16 border-x hover:bg-gray-900 text-xl font-mono">OPEN</button>
-								</div>
-							</div>
-							<div className="p-4 flex flex-col items-center rounded-lg shadow-2xl shadow-slate-700 hover:shadow-blue-900 text-lg font-mono w-full md:w-1/2">
-								<img src={blog2} alt="" className="rounded-lg w-full" />
-								<div>
-									<h3 className="mt-2">Typewriter Effect</h3>
-									<div className="border border-slate-800"></div>
-								</div>
-								<small className="mt-5 w-[90%]">Spice up your website with React's typewriter effect: Text that types itself, one keystroke at a time!</small>
-								<div className="mt-5 w-full flex flex-row justify-center">
-									<button className="mt-5 py-2 px-7 md:px-16 border-x hover:bg-gray-900 text-xl font-mono">OPEN</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
+			<Blogs/>
 
 			{/* Connect */}
 			<section className="min-h-screen w-full flex flex-col items-center bg-black text-white" id="Connect">
