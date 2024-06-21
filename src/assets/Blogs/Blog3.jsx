@@ -142,7 +142,7 @@ function Blog3() {
                         By similar approach, we arrive at the minimum value of b.
                     </div>
                     <div className='mt-10 text-xl md:text-3xl text-blue-700'>What to do with these minimum values of w and b?</div>
-                    <div className='mt-10 flex flex-col md:flex-row gap-5 md:gap-0 text-lg md:text-xl'>
+                    <div className='mt-2 flex flex-col md:flex-row gap-5 md:gap-0 text-lg md:text-xl'>
                         <div className='md:w-1/2 flex flex-col'>
                             <div>
                                 Having obtained the minimum values of w and b, we straightforwardly substitute them into the linear equation we defined earlier: ŷ<sub>i</sub> = w * x<sub>i</sub> + b. The obtained straight line would look like something as in Fig 1.4.                        
