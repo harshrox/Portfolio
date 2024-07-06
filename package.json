@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "highlight.js": "^11.9.0",
     "katex": "^0.16.10",
+    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-frame-component": "^5.2.7",
     "react-katex": "^3.0.1",
     "react-router-dom": "^6.23.1",
+    "react-syntax-highlighter": "^15.5.0",
     "react-type-animation": "^3.2.0"
   },
   "devDependencies": {

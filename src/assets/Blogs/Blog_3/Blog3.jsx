@@ -1,6 +1,6 @@
 import React from 'react';
-import Frame from 'react-frame-component';
-import '../../App.css';
+import '../../../App.css';
+import BlogHeader from '../BlogHeader'
 import ageVsCharge from './ageVsCharge.png';
 import costFunction from './costFunction.png';
 import partialDerivative from './partialDerivative.png';
@@ -8,28 +8,12 @@ import costVsWeight from './costVsWeight.jpg';
 import straightLine from './straightLine.png';
 
 function Blog3() {
-  const gistUrl = '';
-
+  
   return (
-    // <div style={{ height: '100%' }} className='flex justify-center'>
-    //   <Frame
-    //     style={{ width: '50%', height: '100%', border: 'none' }}
-    //     initialContent={`<!DOCTYPE html><html><head></head><body style="margin:0;"><script src="${gistUrl}"></script></body></html>`}
-    //   />
-    // </div>
+    
     <>
-        <div className='flex flex-col justify-center items-center py-10 md:py-14'>
-            
-            <div className='w-auto flex flex-col justify-center items-center'>
-                <div className='p-2 border-b-2 border-dashed border-blue-700 font-mono text-xl md:text-5xl'>
-                    Gradient Descent Optimization
-                </div>
-                <div className='p-2 flex justify-between w-full font-mono text-gray-300'>
-                    <div><small>10 min read</small></div>
-                    <div><small>June 05, 2024</small></div>
-                </div>
-            </div>
-        </div>
+    
+        <BlogHeader title="Gradient Descent Optimization" readTime="10 min read" date="June 05, 2024"/>
         
         <div className="h-auto w-full flex flex-col items-center font-mono">
 				<div className='px-5 md:px-10 w-full lg:w-[70%] flex flex-col'>

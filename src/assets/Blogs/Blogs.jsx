@@ -10,7 +10,8 @@ function Blogs() {
             <section className='mt-20 md:mt-40 px-5 md:px-10 w-[90%] md:w-[70%] flex flex-col'>
                 <div className="py-2 text-2xl md:text-4xl font-mono text-white">BLOGS</div>
                 <div className="mb-5 md:mb-10 w-[6%] border border-blue-700"></div>
-                <div className="flex flex-col gap-10">
+                <div className="relative flex flex-col gap-10">
+                    <small className="absolute w-auto h-4 right-0 top-[-1.2rem] font-mono italic text-slate-400">Latest</small>
                     <BlogCard
                         imgSrc={blog3}
                         title="Understanding Gradient Descent Optimization for Linear Regression."
@@ -21,17 +22,18 @@ function Blogs() {
                     <BlogCard
                         imgSrc={blog2}
                         title="Spice up the website with React's typewriter effect."
-                        date="June 05, 2024"
+                        date="June 04, 2024"
                         readTime="3 min read"
                         link="/blog2"
                     />
                     <BlogCard
                         imgSrc={blog1}
                         title="Fun and functional makeover of the boring terminal."
-                        date="June 05, 2024"
+                        date="June 04, 2024"
                         readTime="5 min read"
                         link="/blog1"
                     />
+                    <small className="absolute w-auto h-4 right-0 bottom-[-1.2rem] font-mono italic text-slate-400">Oldest</small>
                 </div>
             </section>
         </div>

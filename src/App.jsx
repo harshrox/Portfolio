@@ -21,9 +21,10 @@ import hackerrank from './assets/Images/hackerrank.svg'
 import arrow from './assets/Images/arrow.svg'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Blogs from './assets/Blogs/Blogs';
-import Blog1 from './assets/Blogs/Blog1'; 
-import Blog2 from './assets/Blogs/Blog2'; 
-import Blog3 from './assets/Blogs/Blog3'; 
+import Blog1 from './assets/Blogs/Blog_1/Blog1'; 
+import Blog2 from './assets/Blogs/Blog_2/Blog2'; 
+import Blog3 from './assets/Blogs/Blog_3/Blog3'; 
+import resume from './assets/Downloadables/ResumeHarsh.pdf';
 
 function App() {
 	return (
@@ -170,7 +171,9 @@ function Home() {
 						</div>
 					</section>
 					<section>
-						<button className="mt-20 py-5 px-7 md:px-16 border-x hover:bg-gray-900 text-xl font-mono">DOWNLOAD RESUME</button>
+						<a href={resume} download="ResumeHarsh" target='_blank'>
+							<button className="mt-20 py-5 px-7 md:px-16 border-x hover:bg-gray-900 text-xl font-mono">DOWNLOAD RESUME</button>
+						</a>
 					</section>
 				</main>
 			</div>
