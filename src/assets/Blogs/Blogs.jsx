@@ -17,7 +17,7 @@ function Blogs() {
                         <BlogCard
                             imgSrc={blogOhMyPosh}
                             title="Fun and functional makeover of the boring terminal."
-                            date="July 08, 2024"
+                            date="July 09, 2024"
                             readTime="5 min read"
                             link="/blogOhMyPosh"
                         />

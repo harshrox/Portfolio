@@ -32,7 +32,7 @@ fc-cache -fv`;
 
   return (
     <>           
-      <BlogHeader title="Oh My Posh" readTime="5 min read" date="July 08, 2024"/>
+      <BlogHeader title="Oh My Posh" readTime="5 min read" date="July 09, 2024"/>
 
       <div className="h-auto w-full flex flex-col items-center font-mono">
         <div className='px-5 md:px-10 w-full lg:w-[70%] flex flex-col'>
