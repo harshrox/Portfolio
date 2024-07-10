@@ -127,6 +127,7 @@ function Intro() {
                         </div>
                     </div>
                     <div>
+                        {/* The resume is directly accessed from the public folder */}
                         <a href="/ResumeHarsh.pdf" download="ResumeHarsh" target='_blank'>
                             <button className="mt-20 py-5 px-7 md:px-16 border-x hover:bg-gray-900 text-xl font-mono">DOWNLOAD RESUME</button>
                         </a>
