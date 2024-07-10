@@ -1,0 +1,39 @@
+.blogs-scroll-container {
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding-right: 10px; 
+    position: relative;
+}
+
+/* Styling the scrollbar for better aesthetics */
+.blogs-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.blogs-scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.6);
+    border-radius: 4px;
+}
+
+.blogs-scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(100, 100, 100, 0.8);
+}
+
+.blogs-scroll-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for small screens (up to 768px wide) */
+@media (max-width: 768px) {
+    .blogs-scroll-container {
+        max-height: 80vh; /* Max-height = 80% of viewport height for small screens */
+        min-height: 40vh;
+    }
+}
+
+/* Media query for large screens (769px wide and above) */
+@media (min-width: 769px) {
+    .blogs-scroll-container {
+        max-height: 60vh; /* Max-height = 60% of viewport height for large screens */
+        min-height: 30vh;
+    }
+}

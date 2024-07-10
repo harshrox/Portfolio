@@ -13,7 +13,7 @@ function Blog3() {
     
     <>
     
-        <BlogHeader title="Gradient Descent Optimization" readTime="10 min read" date="June 05, 2024"/>
+        <BlogHeader title="Gradient Descent Optimization" readTime="10 min read" date="June 10, 2024"/>
         
         <div className="h-auto w-full flex flex-col items-center font-mono">
 				<div className='px-5 md:px-10 w-full lg:w-[70%] flex flex-col'>
