@@ -23,6 +23,7 @@ function App() {
 				<Route path="/blogTypewriterEffect" element={<BlogTypewriterEffect/>} />
 				<Route path="/blogLinearRegression" element={<BlogLinearRegression/>} />
 			</Routes>
+			<Analytics />
 		</Router>
 	);
 }
