@@ -6,7 +6,7 @@ import profile from '../../assets/Images/Photo.png';
 import linkedin from '../../assets/Images/linkedin.svg';
 import github from '../../assets/Images/github.svg';
 import leetcode from '../../assets/Images/leetcode.svg';
-import resume from '../../assets/Downloadables/ResumeHarsh.pdf';
+
 
 function Intro() {
 
@@ -127,7 +127,7 @@ function Intro() {
                         </div>
                     </div>
                     <div>
-                        <a href={resume} download="ResumeHarsh" target='_blank'>
+                        <a href="/ResumeHarsh.pdf" download="ResumeHarsh" target='_blank'>
                             <button className="mt-20 py-5 px-7 md:px-16 border-x hover:bg-gray-900 text-xl font-mono">DOWNLOAD RESUME</button>
                         </a>
                     </div>
