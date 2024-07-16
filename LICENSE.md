@@ -1,4 +1,4 @@
-## License
+## ATTRIBUTION-NONCOMMERCIAL-NODERIVATIVES 4.0 INTERNATIONAL
 
 You are free to:
 - **Share** — copy and redistribute the material in any medium or format
